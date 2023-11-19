@@ -2,13 +2,11 @@ trigger:
 - master
 
 pool:
-  vmImage: windows-latest
+  vmImage: ubuntu-latest
 
 
 steps:
-- task: MSBuild@1
-  inputs:
-    solution: '**/*.sln'
+
 - task: SonarCloudPublish@1
   inputs:
     pollingTimeoutSec: '300'
