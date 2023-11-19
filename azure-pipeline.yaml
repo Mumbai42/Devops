@@ -10,14 +10,14 @@ steps:
 - task: SonarCloudPrepare@1
   inputs:
     SonarCloud: 'Sonarconnection'
-    organization: 'devopskeyfordemo'
+    organization: 'devopstestjune2023'
     scannerMode: 'Other'
     extraProperties: |
-      # Additional properties that will be passed to the scanner,
-       # Put one key=value per line, example:
-       # sonar.exclusions=**/*.bin
-           sonar.projectKey=devopskeyfordemo_devops
-      sonar.projectName=Devops
+      # Additional properties that will be passed to the scanner, 
+      # Put one key=value per line, example:
+      # sonar.exclusions=**/*.bin
+      sonar.projectKey=devopstestjune2023
+      sonar.projectName=Azurewebsite
 
 - task: JavaToolInstaller@0
   inputs:
