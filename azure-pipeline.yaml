@@ -4,5 +4,5 @@ pool:
   vmimage: ubuntu-latest
 steps:
 - script: |
-  echo: "this is command for devsecops"
-displayName: "Print Console for Demo"
+    echo "this is command for devsecops"
+  displayName: "Print Console for Demo"
