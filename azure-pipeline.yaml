@@ -7,16 +7,18 @@ pool:
   vmImage: ubuntu-latest
 
 steps:
-- task: SonarQubePrepare@5
+- task: SonarCloudPrepare@1
   inputs:
-    SonarQube: 'Sonar'
+    SonarCloud: 'Sonarconnection'
+    organization: 'devopskeyfordemo'
     scannerMode: 'Other'
     extraProperties: |
       # Additional properties that will be passed to the scanner,
-      # Put one key=value per line, example:
-      # sonar.exclusions=**/*.bin
-      sonar.projectKey=Azurewebsite_Devops_AYvoG3mv6NmlvwgwAMr_
-      sonar.projectName=Devops
+       # Put one key=value per line, example:
+       # sonar.exclusions=**/*.bin
+           sonar.projectKey=devopskeyfordemo_devsecops
+      sonar.projectName=devsecops
+
 - task: JavaToolInstaller@0
   inputs:
     versionSpec: '17'
@@ -33,9 +35,10 @@ steps:
     effectivePomSkip: false
     sonarQubeRunAnalysis: true
     sqMavenPluginVersionChoice: 'latest'
-- task: SonarQubePublish@5
+- task: SonarCloudPublish@1
   inputs:
     pollingTimeoutSec: '300'
+
 
 
 
