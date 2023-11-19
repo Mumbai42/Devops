@@ -16,8 +16,8 @@ steps:
       # Additional properties that will be passed to the scanner,
        # Put one key=value per line, example:
        # sonar.exclusions=**/*.bin
-           sonar.projectKey=devopskeyfordemo_devsecops
-      sonar.projectName=devsecops
+           sonar.projectKey=devopskeyfordemo_devops
+      sonar.projectName=Devops
 
 - task: JavaToolInstaller@0
   inputs:
