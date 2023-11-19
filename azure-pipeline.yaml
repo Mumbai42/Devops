@@ -4,5 +4,6 @@ pool:
   vmimage: ubuntu-latest
 steps:
 - script: |
-    echo "this is command for devsecops"
-  displayName: "Print Console for Demo for Devsecops Pipelines"
+     mvn verify package sonar:sonar -Dsonar.host.url=https://sonarcloud.io/ -Dsonar.organization=devsecopsorg -Dsonar.projectKey=devopskeyfordemo_devsecops -Dsonar.login=332d13a781bf754530de05c79d92e767cb020961
+  displayName: "Integrate SAST using SonarCloud in Azure DevOps DevSecOps Pipeline"
+  
